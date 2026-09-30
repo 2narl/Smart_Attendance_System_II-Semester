@@ -1,6 +1,4 @@
 /*
-g++ src/*.cpp -Iinclude -o attendance
-.\attendance.exe
 g++ src/*.cpp -Iinclude -o project
 .\project.exe
 */
