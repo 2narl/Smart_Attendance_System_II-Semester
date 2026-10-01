@@ -1,7 +1,4 @@
-/*
-g++ src/*.cpp -Iinclude -o project
-.\project.exe
-*/
+
 
 #include "Panels.h"
 
