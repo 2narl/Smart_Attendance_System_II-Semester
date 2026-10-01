@@ -3,180 +3,159 @@
 ## SMART ATTENDANCE MANAGEMENT SYSTEM
 
 **A Project Report**  
-Submitted in partial fulfillment of the requirement of **Project-II (BIT156CO)**  
+Submitted in partial fulfillment of the requirements of **Project-II (BIT156CO)**  
 of  
 **Bachelor of Information Technology (BIT)**
 
 **Submitted to:**  
-**Purbanchal University**  
+Purbanchal University  
 Faculty of Science and Technology  
 Biratnagar, Nepal
 
 **Submitted by:**  
-**[Student Name]** — [Symbol No.]  
-**[Second Student Name, if applicable]** — [Symbol No.]  
-**[Third Student Name, if applicable]** — [Symbol No.]
+[Student Name] — [Symbol No.]  
+[Second Student Name, if applicable] — [Symbol No.]
 
 **Under the Supervision of:**  
-**[Supervisor Name]**  
+[Supervisor Name]  
 [Designation]
 
-**[College Name]**  
+[College Name]  
 [College Address]
 
-**[Month, Year]**
+[Month, Year]
 
 ---
 
 # CERTIFICATE OF PROJECT COMPLETION
 
-This is to certify that the project work entitled **“Smart Attendance Management System”** has been carried out by **[Student Name(s)]**, students of Bachelor of Information Technology (BIT), in partial fulfillment of the requirements of **Project-II (BIT156CO)** under Purbanchal University.
+This is to certify that the project work entitled **“Smart Attendance Management System”** has been carried out by the student(s) of Bachelor of Information Technology (BIT), in partial fulfillment of the requirements of Project-II under Purbanchal University.
 
-The project has been developed using C++ and demonstrates the application of object-oriented programming, file handling, data validation, role-based access, record management, and attendance management concepts.
+The system has been developed using C++ and demonstrates object-oriented programming, file handling, authentication, data validation, student and teacher management, and attendance management.
 
-The project report has been prepared under the guidance and supervision of the assigned project supervisor. To the best of our knowledge, the work presented in this report is suitable for academic evaluation.
+**Project Supervisor:** __________________________  
+**Signature:** _________________________________  
+**Date:** _____________________________________
 
-**Project Supervisor:**  
-Name: __________________________  
-Signature: _______________________  
-Date: ___________________________
-
-**Program Coordinator:**  
-Name: __________________________  
-Signature: _______________________  
-Date: ___________________________
-
----
-
-# EXAMINER'S CERTIFICATION
-
-The project report entitled **“Smart Attendance Management System”**, developed by **[Student Name(s)]**, is presented for the partial fulfillment of the requirements of Bachelor of Information Technology under Purbanchal University.
-
-The project report is approved in its present form as it satisfies the academic requirements prescribed for the project work.
-
-| | Internal Examiner | External Examiner |
-|---|---|---|
-| Name | __________________ | __________________ |
-| Designation | __________________ | __________________ |
-| Signature | __________________ | __________________ |
-| Date | __________________ | __________________ |
+**Program Coordinator:** ________________________  
+**Signature:** _________________________________  
+**Date:** _____________________________________
 
 ---
 
 # STUDENT'S DECLARATION
 
-We hereby declare that the project report entitled **“Smart Attendance Management System”** is our original academic work carried out for **Project-II (BIT156CO)** of Bachelor of Information Technology under Purbanchal University.
+We hereby declare that the project report entitled **“Smart Attendance Management System”** is our original academic work carried out for Project-II of the Bachelor of Information Technology program under Purbanchal University.
 
-The project has been developed using C++ and the work presented in this report is based on our implementation, study, testing, and documentation. We have used references and learning materials where required and have acknowledged them appropriately.
+The system, implementation, testing, and documentation presented in this report are based on the project developed by us. References and learning resources used during the project have been acknowledged appropriately.
 
-We further declare that this project report has not been submitted to any other institution for the fulfillment of another degree, diploma, or academic award.
-
-**Student Name:** __________________________  
-**Symbol No.:** ____________________________  
-**Signature:** ______________________________  
-**Date:** __________________________________
+**Student Name:** ______________________________  
+**Symbol No.:** ________________________________  
+**Signature:** _________________________________  
+**Date:** _____________________________________
 
 ---
 
 # ACKNOWLEDGEMENT
 
-We would like to express our sincere gratitude to Purbanchal University for providing the academic opportunity to undertake this project as a part of the Bachelor of Information Technology program.
+We would like to express our sincere gratitude to Purbanchal University for providing the opportunity to undertake this project as part of the Bachelor of Information Technology program.
 
-We are grateful to our project supervisor **[Supervisor Name]** for providing valuable guidance, suggestions, and encouragement throughout the development of the project. The supervisor's feedback helped us improve the system design, implementation, testing, and documentation.
+We are thankful to our project supervisor for valuable guidance, suggestions, and encouragement throughout the project. We also thank the program coordinator, teachers, staff members, classmates, and friends who provided support and suggestions during the development and documentation of the system.
 
-We would also like to thank the BIT program coordinator, teachers, and staff members of **[College Name]** for their support and academic guidance. We are thankful to our classmates and friends who provided suggestions and feedback during the development and testing of the system.
-
-Finally, we express our sincere gratitude to our family members for their continuous encouragement and support.
+Finally, we are grateful to our family members for their continuous encouragement and support.
 
 ---
 
 # ABSTRACT
 
-The **Smart Attendance Management System** is a C++ console-based application developed as a second-semester Bachelor of Information Technology Project-II. The main purpose of the system is to provide a simple and organized way to manage user accounts, student and teacher information, and attendance records.
+The **Smart Attendance Management System** is a C++ console-based application developed as an academic Project-II for the Bachelor of Information Technology program. The system provides a structured way to manage user accounts, student records, teacher records, staff information, and attendance records.
 
-The system implements role-based access for **Administrator, Sub-Administrator, Student, and Teacher** users. Administrators can manage users, students, teachers, attendance records, and system settings, while Sub-Administrators have controlled administrative functions. Students and teachers can log in, view their personal information, and manage or view their attendance according to their roles.
+The system supports role-based authentication for **Admin, Sub-Admin, Student, and Teacher** users. Administrators and Sub-Administrators can manage student and teacher records and perform attendance operations, while students and teachers can log in, view their personal information, view attendance, and mark their own attendance.
 
-The project uses **object-oriented programming in C++**, including classes, inheritance, encapsulation, member functions, and modular source/header files. Data is stored persistently using binary files such as `credentials.dat`, `students.dat`, `teachers.dat`, `staff.dat`, and `attendance.dat`. The system also includes input validation, duplicate checking, record searching, updating, deletion, attendance percentage calculation, and file-rewrite techniques for safe record modification.
+The application is implemented using object-oriented programming concepts such as classes, inheritance, encapsulation, constructors, member functions, and modular source/header files. Persistent data is stored in binary files including `credentials.dat`, `students.dat`, `teachers.dat`, `staff.dat`, and `attendance.dat`. The system also provides input validation, duplicate checking, record searching, updating, deletion, attendance percentage calculation, and file-rewrite operations.
 
-For basic password protection, the project applies XOR-based obfuscation to stored credential records. This provides protection against casual inspection of the binary file, but it is not intended to replace a modern cryptographic password-hashing mechanism.
+The project demonstrates how C++ OOP and file handling can be applied to a practical attendance-management problem. The current version is intended for local academic use and can be extended in the future with database storage, secure password hashing, graphical or web interfaces, automated attendance, and advanced reporting.
 
-The system demonstrates how C++ object-oriented concepts can be applied to a practical educational management problem. It can serve as a foundation for a future web- or database-based attendance system with stronger authentication, centralized storage, reporting, and multi-user access.
-
-**Keywords:** Attendance Management, C++, Object-Oriented Programming, Binary File Handling, Role-Based Access, Student Management, Teacher Management.
+**Keywords:** Attendance Management, C++, Object-Oriented Programming, Binary File Handling, Authentication, Student Management, Teacher Management.
 
 ---
 
 # TABLE OF CONTENTS
 
-1. Chapter One: Introduction  
-   1.1 Background  
-   1.2 Problem Statement  
-   1.3 Objectives  
-   1.4 Scope of the Project  
-   1.5 Significance of the Project  
-   1.6 Major Features  
-   1.7 Limitations  
-   1.8 Organization of the Report  
+1. Chapter 1: Introduction  
+   1.1 Background and Significance of the Project  
+   1.2 Objectives and Scope  
+   1.3 Project Features  
+   1.4 Summary and Project Organization  
 
-2. Chapter Two: Literature Review  
+2. Chapter 2: Literature Review  
    2.1 Introduction  
-   2.2 Existing Attendance Practices  
+   2.2 Previous System or Work Study  
    2.3 Manual Attendance System  
-   2.4 Computerized Attendance Systems  
+   2.4 Computerized Attendance System  
    2.5 Comparative Review  
    2.6 Summary  
 
-3. Chapter Three: System Analysis  
-   3.1 Introduction  
-   3.2 Existing System  
-   3.3 Proposed System  
-   3.4 Feasibility Analysis  
+3. Chapter 3: Analysis of Issues and Solution  
+   3.1 Introduction to Existing Systems  
+   3.2 Issues in the Existing System  
+   3.3 Proposed Solution  
+   3.4 Methods Used to Solve the Issues  
    3.5 Functional Requirements  
    3.6 Non-Functional Requirements  
-   3.7 Hardware Requirements  
-   3.8 Software Requirements  
-   3.9 User Roles and Permissions  
+   3.7 Feasibility of the Proposed Solution  
 
-4. Chapter Four: System Design  
+4. Chapter 4: Design Specification and Implementation  
    4.1 System Architecture  
-   4.2 Module Design  
-   4.3 Data/File Design  
-   4.4 Class Design  
-   4.5 Use-Case Description  
-   4.6 Data Flow  
-   4.7 Attendance Workflow  
-   4.8 Algorithms  
-   4.9 Input Validation and Error Handling  
+   4.2 Context Diagram  
+   4.3 Level 1 Data Flow Diagram  
+   4.4 Data Dictionary  
+   4.5 Working Procedure  
+   4.6 Flowchart Diagram  
+   4.7 Use Case Diagram  
+   4.8 Class Design and Module Structure  
+   4.9 Implementation Details  
 
-5. Chapter Five: System Development and Implementation  
-   5.1 Development Environment  
-   5.2 Programming Language  
-   5.3 Project Structure  
-   5.4 Authentication Module  
-   5.5 User Management Module  
-   5.6 Student Management Module  
-   5.7 Teacher Management Module  
-   5.8 Attendance Module  
-   5.9 File Handling Module  
-   5.10 Data Validation  
-   5.11 Security and Credential Protection  
-   5.12 User Interface  
+5. Chapter 5: Experiment Result and Analysis  
+   5.1 Introduction  
+   5.2 Experiment Environment  
+   5.3 Testing Scenarios  
+   5.4 Experiment and Result  
+   5.5 Result Analysis  
 
-6. Chapter Six: System Testing  
-   6.1 Testing Introduction  
-   6.2 Testing Strategy  
-   6.3 Test Cases  
-   6.4 Validation Tests  
-   6.5 Error Handling Tests  
-   6.6 Testing Limitations  
-
-7. Chapter Seven: Limitations, Future Enhancements and Conclusion  
-   7.1 Limitations  
-   7.2 Future Enhancements  
-   7.3 Conclusion  
+6. Chapter 6: Conclusion and Future Work  
+   6.1 Conclusion  
+   6.2 Limitations  
+   6.3 Future Work  
 
 References  
-Appendices
+Bibliography (Optional)  
+Appendixes
+
+---
+
+# REPORT FORMATTING STANDARDS
+
+The final report should be formatted in a word-processing document using the following standards:
+
+| Item | Required Format |
+|---|---|
+| Font | Times New Roman |
+| Normal text | 12 pt |
+| Line spacing | 1.5 |
+| Paragraph spacing | 18 pt |
+| Left margin | 1.5 inch |
+| Right margin | 1.25 inch |
+| Top margin | 1.25 inch |
+| Bottom margin | 1.25 inch |
+| Header | 0.5 inch |
+| Footer | 0.5 inch |
+| Heading 1 | 16 pt, Bold |
+| Heading 2 | 14 pt, Bold |
+| Heading 3 | 13 pt, Bold |
+| Heading 4 | 12 pt, Bold |
+
+**Note:** Markdown cannot enforce Times New Roman, margins, or Word paragraph spacing. These settings should be applied when this report is transferred to MS Word or another word processor.
 
 ---
 
@@ -184,12 +163,12 @@ Appendices
 
 | Figure | Title |
 |---|---|
-| Figure 4.1 | Overall System Architecture |
-| Figure 4.2 | Main Login Flow |
-| Figure 4.3 | User Management Flow |
-| Figure 4.4 | Student Attendance Flow |
-| Figure 4.5 | Manual Attendance Override Flow |
-| Figure 4.6 | File-Based Data Storage Structure |
+| Figure 4.1 | System Architecture |
+| Figure 4.2 | Context Diagram |
+| Figure 4.3 | Level 1 Data Flow Diagram |
+| Figure 4.4 | Attendance Working Flowchart |
+| Figure 4.5 | Use Case Diagram |
+| Figure 4.6 | Class/Inheritance Structure |
 
 ---
 
@@ -197,16 +176,13 @@ Appendices
 
 | Table | Title |
 |---|---|
-| Table 3.1 | Functional Requirements |
-| Table 3.2 | Non-Functional Requirements |
-| Table 3.3 | Hardware Requirements |
-| Table 3.4 | Software Requirements |
-| Table 3.5 | User Roles and Permissions |
-| Table 4.1 | Data File Description |
+| Table 3.1 | Issues in Existing System and Proposed Solutions |
+| Table 3.2 | Functional Requirements |
+| Table 3.3 | Non-Functional Requirements |
+| Table 4.1 | Data Dictionary |
 | Table 4.2 | Main Classes |
-| Table 5.1 | Project Source Files |
-| Table 6.1 | Functional Test Cases |
-| Table 6.2 | Validation Test Cases |
+| Table 5.1 | Experiment Environment |
+| Table 5.2 | Testing Scenarios and Results |
 
 ---
 
@@ -218,224 +194,234 @@ Appendices
 | PU | Purbanchal University |
 | OOP | Object-Oriented Programming |
 | CRUD | Create, Read, Update, Delete |
-| IDE | Integrated Development Environment |
-| XOR | Exclusive OR |
-| DOB | Date of Birth |
-| ID | Identification |
-| UI | User Interface |
 | DFD | Data Flow Diagram |
-| CPU | Central Processing Unit |
+| IDE | Integrated Development Environment |
+| UI | User Interface |
+| XOR | Exclusive OR |
+| ID | Identification |
+| DOB | Date of Birth |
 | RAM | Random Access Memory |
+| CPU | Central Processing Unit |
 
 ---
 
-# CHAPTER ONE: INTRODUCTION
+# CHAPTER 1: INTRODUCTION
 
-## 1.1 Background
+## 1.1 Background and Significance of the Project
 
-Attendance is an important part of educational institutions because it helps monitor student participation and provides information about regularity. In a traditional attendance system, teachers generally record attendance manually using paper registers or spreadsheets. Such methods may require considerable time and can make searching, updating, and calculating attendance percentages difficult.
+Attendance is an important activity in educational institutions because it helps maintain records of student and teacher participation. In a traditional environment, attendance is commonly recorded using paper registers or manually maintained spreadsheets. Such methods can make searching, updating, storing, and calculating attendance more difficult as the number of records increases.
 
-The **Smart Attendance Management System** was developed to provide a simple computerized solution for managing attendance and related user records. The system is designed for educational environments such as schools, colleges, and universities where administrators, teachers, and students need different levels of access.
+The **Smart Attendance Management System** was developed to provide a simple computerized method for managing attendance and related records. The system is designed for a small educational environment such as a school, college, or university.
 
-The project is implemented in C++ using object-oriented programming principles. Instead of relying on a database server, the current version uses binary files to store records. This approach makes the project lightweight and suitable for demonstrating C++ file handling and OOP concepts.
+The project is implemented in C++ using object-oriented programming principles. Instead of using a database server, the current implementation stores information in binary files. This approach keeps the system lightweight and demonstrates practical use of C++ file handling.
 
-The system separates authentication and common data operations from role-specific panels. The major panels are **AdminPanel**, **SubAdminPanel**, and **StudentTeacherPanel**, all of which inherit common functionality from the **AuthenticationBase** class.
+The system uses a common base class named `AuthenticationBase`. Role-specific classes named `AdminPanel`, `SubAdminPanel`, and `StudentTeacherPanel` inherit common functionality from the base class. This structure reduces code duplication and demonstrates inheritance.
 
-## 1.2 Problem Statement
+The project is significant from an academic perspective because it applies C++ programming, object-oriented programming, file handling, authentication, validation, and modular programming to a practical real-world problem.
 
-Traditional attendance management can create several practical problems:
+## 1.2 Objectives and Scope
 
-- Attendance records may be maintained manually.
-- Searching for a student's record can take time.
-- Attendance percentage calculation may require manual work.
-- Updating or deleting records can be inconvenient.
-- Different users may require different access permissions.
-- Attendance records may become difficult to organize as the number of students increases.
-- Maintaining separate paper records can increase the possibility of human error.
-- A simple educational project is needed to demonstrate how C++ OOP and file handling can solve these problems.
-
-Therefore, the project aims to develop a simple console-based attendance management system that organizes user, student, teacher, and attendance information in a structured manner.
-
-## 1.3 Objectives
-
-### 1.3.1 General Objective
+### 1.2.1 General Objective
 
 To develop a simple and organized attendance management system using C++ and object-oriented programming concepts.
 
-### 1.3.2 Specific Objectives
+### 1.2.2 Specific Objectives
 
 The specific objectives are:
 
 1. To implement role-based user authentication.
-2. To manage administrator and sub-administrator accounts.
-3. To add, search, update, and delete student records.
-4. To add, search, update, and delete teacher records.
-5. To allow students and teachers to view their attendance.
-6. To allow eligible users to mark attendance.
-7. To provide administrative attendance marking and override facilities.
-8. To prevent duplicate attendance for the same user, date, and subject.
-9. To calculate attendance percentage from stored records.
-10. To store data persistently using binary files.
-11. To validate user input and reduce invalid records.
-12. To demonstrate practical use of OOP, inheritance, encapsulation, and file handling in C++.
+2. To manage Admin and Sub-Admin accounts.
+3. To manage student records.
+4. To manage teacher records.
+5. To store staff information.
+6. To allow students and teachers to view their attendance.
+7. To allow students and teachers to mark their own attendance.
+8. To allow authorized administrative users to mark or override attendance.
+9. To prevent duplicate attendance records for the same user, date, and subject.
+10. To calculate attendance percentage.
+11. To validate user input and important record fields.
+12. To store records persistently using binary files.
+13. To demonstrate practical use of OOP and file handling.
 
-## 1.4 Scope of the Project
+### 1.2.3 Scope of the Project
 
-The project is designed for small educational environments where attendance and basic user records need to be maintained locally.
+The project focuses on local attendance management for a small educational environment.
 
-The system covers:
+The scope includes:
 
-- User authentication.
+- Role-based authentication.
 - Admin and Sub-Admin management.
 - Student management.
 - Teacher management.
-- Staff profile management.
+- Staff information management.
 - Attendance marking.
-- Attendance viewing.
 - Attendance history.
 - Attendance percentage calculation.
 - Manual attendance override.
-- Search facilities.
+- Search and update operations.
+- Duplicate prevention.
 - Data validation.
 - Binary-file storage.
-- Basic credential obfuscation.
-- Legacy student and teacher file migration.
 
-The current system is mainly intended as an academic project and a prototype rather than a large-scale institutional information system.
+The current project does not attempt to provide a large-scale cloud-based institutional information system.
 
-## 1.5 Significance of the Project
+## 1.3 Project Features
 
-The project is significant because it demonstrates the practical application of concepts learned in the second semester of BIT, particularly C++ programming and object-oriented programming.
+The major features of the system are:
 
-It provides the following benefits:
+### 1.3.1 Authentication
 
-- Reduces dependence on paper-based attendance.
-- Makes basic attendance records easier to search.
-- Provides role-based access.
-- Reduces duplicate attendance entries.
-- Automatically calculates attendance percentage.
-- Demonstrates persistent file storage.
-- Demonstrates inheritance and modular programming.
-- Provides a foundation for future database-based systems.
+The system provides separate login facilities for:
 
-## 1.6 Major Features
+- Admin.
+- Sub-Admin.
+- Student.
+- Teacher.
 
-The major features are:
+The login process verifies username, password, and role.
 
-1. **Role-based login**
-   - Admin
-   - Sub-Admin
-   - Student
-   - Teacher
+### 1.3.2 User Management
 
-2. **User management**
-   - Add user
-   - View user
-   - Update credentials
-   - Delete user
+Admin users can:
 
-3. **Student management**
-   - Add student
-   - Search student
-   - Update student
-   - Delete student
-   - List students
-   - View attendance
+- Add Admin/Sub-Admin accounts.
+- View user details.
+- Search users.
+- Update user credentials.
+- Delete users.
 
-4. **Teacher management**
-   - Add teacher
-   - Search/view teacher
-   - Update teacher
-   - Delete teacher
-   - View teacher attendance
+### 1.3.3 Student Management
 
-5. **Attendance management**
-   - Mark attendance
-   - View attendance history
-   - Attendance percentage
-   - Manual attendance override
-   - Duplicate attendance prevention
-   - Present, Absent, and Late status
+Authorized users can:
 
-6. **Data validation**
-   - Date validation
-   - Birth-date validation
-   - Field-size validation
-   - Duplicate username checking
-   - Duplicate roll-number checking
-   - Duplicate teacher-ID checking
+- Add students.
+- Search students.
+- Search by username, name, or roll number.
+- Update student information.
+- Delete student records.
+- List student records.
+- View student attendance.
 
-## 1.7 Limitations
+### 1.3.4 Teacher Management
 
-The current project has several limitations:
+Authorized users can:
 
-1. It uses binary files instead of a relational database.
-2. Most searches are sequential and may become slower with large amounts of data.
-3. The user interface is console-based.
-4. The system is primarily intended for local use.
-5. It does not provide a web or mobile interface.
-6. It does not provide remote multi-user access.
-7. Password protection uses simple XOR obfuscation, not modern password hashing.
-8. There is no cloud backup facility.
-9. Reporting and data export are limited.
-10. Attendance is not integrated with biometric devices, QR codes, RFID, or online services.
+- Add teachers.
+- Search teachers.
+- Update teacher information.
+- Delete teacher records.
+- View teacher attendance.
 
-## 1.8 Organization of the Report
+### 1.3.5 Attendance Management
 
-This report is organized into seven chapters. Chapter One introduces the project. Chapter Two reviews existing attendance approaches. Chapter Three presents system analysis and requirements. Chapter Four explains system design and algorithms. Chapter Five discusses development and implementation. Chapter Six presents testing. Chapter Seven discusses limitations, future enhancements, and conclusion. References and appendices are provided at the end.
+The system supports:
+
+- Marking attendance.
+- Viewing attendance history.
+- Present, Absent, and Late status.
+- Duplicate attendance prevention.
+- Manual attendance override.
+- Attendance percentage calculation.
+
+### 1.3.6 Validation
+
+The system validates:
+
+- Username uniqueness.
+- Roll-number uniqueness.
+- Teacher-ID uniqueness.
+- Date format.
+- Birth date.
+- Attendance status.
+- Field length.
+- Binary file record size.
+- Menu input.
+
+## 1.4 Summary and Project Organization
+
+This report is organized into six chapters.
+
+**Chapter 1: Introduction** presents the background, significance, objectives, scope, features, and organization of the project.
+
+**Chapter 2: Literature Review** discusses previous and existing attendance-management approaches and compares manual, spreadsheet-based, and computerized systems.
+
+**Chapter 3: Analysis of Issues and Solution** identifies problems in existing attendance practices and explains how the proposed system addresses them.
+
+**Chapter 4: Design Specification and Implementation** presents the architecture, context diagram, DFD, data dictionary, working procedure, flowchart, use case diagram, class structure, and implementation details.
+
+**Chapter 5: Experiment Result and Analysis** presents the testing environment, test scenarios, results, and analysis of the implemented system.
+
+**Chapter 6: Conclusion and Future Work** presents the conclusion, limitations, and possible future improvements.
 
 ---
 
-# CHAPTER TWO: LITERATURE REVIEW
+# CHAPTER 2: LITERATURE REVIEW
 
 ## 2.1 Introduction
 
-Attendance management is a common requirement in educational institutions. Different institutions use different approaches depending on their size, available technology, and requirements. The main approaches can be divided into manual, spreadsheet-based, desktop, web-based, mobile-based, and automated systems.
+Literature review provides an understanding of previous approaches and systems related to attendance management. Attendance systems range from simple manual registers to computerized, web-based, mobile, QR-code, RFID, and biometric systems.
 
-## 2.2 Existing Attendance Practices
+For this academic project, the review mainly focuses on manual and computerized attendance management because the proposed system is a local C++ application.
 
-Traditional educational institutions commonly use attendance registers in which a teacher records attendance for each class. The records may later be transferred to spreadsheets or other systems.
+## 2.2 Previous System or Work Study
 
-The manual approach is easy to start but becomes difficult when there are many students, subjects, or attendance dates.
+Traditional attendance management normally involves a teacher recording student attendance in a physical register. Later, the attendance may be transferred to a spreadsheet or another record system.
+
+Computerized attendance systems improve this process by storing information electronically and providing functions such as searching, updating, reporting, and automatic calculation.
+
+Modern systems may also use:
+
+- Web applications.
+- Mobile applications.
+- QR codes.
+- RFID cards.
+- Biometric devices.
+- Cloud databases.
+
+The present project uses a simpler local approach based on C++ and binary files. This approach is suitable for demonstrating programming and file-handling concepts within an academic project.
 
 ## 2.3 Manual Attendance System
 
-In a manual system:
+A manual attendance process generally follows these steps:
 
-1. The teacher opens an attendance register.
+1. Teacher opens the attendance register.
 2. Students are identified.
 3. Attendance is marked.
-4. The register is stored physically.
-5. Attendance percentage is calculated later.
+4. Register is stored physically.
+5. Attendance is calculated later.
 
 ### Advantages
 
-- Simple to use.
-- Requires little technology.
-- Low initial setup cost.
+- Simple to understand.
+- Requires little technical infrastructure.
+- Easy to start.
 
 ### Disadvantages
 
-- Time-consuming.
-- Difficult to search.
-- Paper can be damaged or lost.
-- Manual calculations may contain errors.
-- Updating old records is inconvenient.
+- Searching records is time-consuming.
+- Manual calculations can contain errors.
+- Paper records can be lost or damaged.
+- Updating historical records is inconvenient.
+- Duplicate or inconsistent records may occur.
+- Maintaining large numbers of records is difficult.
 
-## 2.4 Computerized Attendance Systems
+## 2.4 Computerized Attendance System
 
-Computerized attendance systems store attendance records electronically. Depending on the system, data may be stored in files or databases.
+A computerized attendance system stores attendance information electronically.
 
-A computerized system can provide:
+Typical functions include:
 
-- Faster searching.
-- Automatic calculation.
 - User authentication.
+- Student management.
+- Teacher management.
+- Attendance marking.
+- Attendance searching.
+- Automatic percentage calculation.
 - Record updating.
-- Centralized or structured storage.
-- Better organization.
+- Record deletion.
+- Persistent storage.
 
-The present project uses a local binary-file approach to demonstrate these concepts while keeping the implementation suitable for a C++ academic project.
+The proposed system provides these basic functions using a C++ console interface and binary-file storage.
 
 ## 2.5 Comparative Review
 
@@ -446,45 +432,63 @@ The present project uses a local binary-file approach to demonstrate these conce
 | Student management | Manual | Yes | Yes |
 | Teacher management | Manual | Yes | Yes |
 | Attendance history | Paper | Yes | Yes |
-| Attendance percentage | Manual | Formula-based | Automatic |
+| Percentage calculation | Manual | Formula | Automatic |
 | Duplicate checking | Manual | Limited | Yes |
 | Record update | Difficult | Yes | Yes |
 | Record deletion | Difficult | Yes | Yes |
 | Persistent storage | Paper | File | Binary files |
-| Console interface | No | No | Yes |
-| Database | No | No/optional | No |
+| Database server | No | No | No |
 | Web access | No | Usually no | No |
+| Console interface | No | No | Yes |
 
 ## 2.6 Summary
 
-The review shows that computerized systems can reduce the effort required for managing attendance and records. The proposed system focuses on a small, local, educational environment and demonstrates the basic functions required for attendance management while applying C++ OOP and file-handling concepts.
+The literature review shows that computerized attendance management can organize attendance information more effectively than a purely manual process. The proposed project focuses on a small local environment and uses C++ OOP and binary files to implement the required attendance-management functions.
 
 ---
 
-# CHAPTER THREE: SYSTEM ANALYSIS
+# CHAPTER 3: ANALYSIS OF ISSUES AND SOLUTION
 
-## 3.1 Introduction
+## 3.1 Introduction to Existing Systems
 
-System analysis identifies the requirements, users, existing problems, and resources required for developing the proposed system.
+The existing attendance process considered in this project is primarily manual or basic spreadsheet-based management.
 
-## 3.2 Existing System
+In a manual process, attendance is recorded in a physical register. In a spreadsheet-based process, records are stored electronically but often depend on manually maintained files and formulas.
 
-The existing/manual approach generally relies on paper registers or basic spreadsheets. The process is often dependent on the teacher or administrator to maintain records and calculate attendance.
+The main issue is that these approaches do not provide an integrated system for authentication, user management, attendance marking, duplicate checking, and role-based operations.
 
-The major problems include:
+## 3.2 Issues in the Existing System
 
-- Repeated manual work.
-- Difficult record searching.
-- Possible data-entry errors.
-- Difficult historical record management.
-- Lack of role-based access.
-- Manual percentage calculation.
+The major issues identified are:
 
-## 3.3 Proposed System
+1. Manual attendance recording requires repeated work.
+2. Searching old attendance records is inconvenient.
+3. Attendance percentage may need manual calculation.
+4. Updating records is difficult in paper-based systems.
+5. Different users require different permissions.
+6. Duplicate attendance can occur without validation.
+7. Student and teacher records may be maintained separately.
+8. Physical records may be damaged or lost.
+9. Maintaining large records manually becomes difficult.
+10. There is no centralized process for authentication and attendance management.
 
-The proposed system provides a structured console application with role-based login and separate management panels.
+## 3.3 Proposed Solution
 
-The application stores information in:
+The proposed solution is a local console-based **Smart Attendance Management System** developed in C++.
+
+The system provides:
+
+- Role-based authentication.
+- Student and teacher management.
+- Admin and Sub-Admin management.
+- Attendance marking.
+- Attendance viewing.
+- Attendance percentage calculation.
+- Duplicate prevention.
+- Data validation.
+- Persistent binary-file storage.
+
+The main data files are:
 
 - `credentials.dat`
 - `students.dat`
@@ -492,541 +496,754 @@ The application stores information in:
 - `staff.dat`
 - `attendance.dat`
 
-The application uses temporary files when updating or deleting records to rewrite the corresponding binary data safely.
+## 3.4 Methods Used to Solve the Issues
 
-## 3.4 Feasibility Analysis
+### 3.4.1 Role-Based Authentication
 
-### 3.4.1 Technical Feasibility
+The system verifies username, password, and role before granting access. This separates the operations available to Admin, Sub-Admin, Student, and Teacher users.
 
-The project is technically feasible because it uses standard C++ features and does not require expensive hardware or a database server. A computer capable of compiling and running C++ programs is sufficient.
+### 3.4.2 Electronic Record Storage
 
-### 3.4.2 Economic Feasibility
+Binary files are used to store records persistently. This removes dependence on paper records and allows the program to read and update records electronically.
 
-The project has low implementation cost because it uses C++ and local file storage. It does not require paid cloud hosting or a commercial database.
+### 3.4.3 Search and Update Operations
 
-### 3.4.3 Operational Feasibility
+The system provides searching by username, name, roll number, or teacher ID where applicable. Record updates are performed by rewriting the relevant binary file through a temporary file.
 
-The system provides simple menu-driven operations. Users can select options according to their roles, making it suitable for basic educational use.
+### 3.4.4 Duplicate Prevention
 
-### 3.4.4 Schedule Feasibility
+Before saving attendance, the system checks whether an attendance record already exists for the same user, date, and subject.
 
-The project can be developed incrementally by implementing authentication, user management, record management, attendance, testing, and documentation as separate stages.
+### 3.4.5 Automatic Percentage Calculation
+
+The system counts total attendance records and Present records and calculates:
+
+**Attendance Percentage = (Present Records / Total Records) × 100**
+
+### 3.4.6 Input Validation
+
+The system validates dates, attendance status, field sizes, usernames, roll numbers, teacher IDs, and menu choices.
+
+### 3.4.7 Controlled Attendance Override
+
+Admin and Sub-Admin users can manually create or update attendance records when correction is required.
+
+### Table 3.1: Issues in Existing System and Proposed Solutions
+
+| Existing Issue | Proposed Solution |
+|---|---|
+| Manual attendance recording | Computerized attendance module |
+| Difficult searching | Search functions |
+| Manual percentage calculation | Automatic calculation |
+| Duplicate attendance | Duplicate checking |
+| Different access requirements | Role-based authentication |
+| Difficult updating | File-rewrite update mechanism |
+| Physical record storage | Binary-file storage |
+| Invalid data | Input validation |
+| Difficult attendance correction | Admin/Sub-Admin override |
 
 ## 3.5 Functional Requirements
 
-| ID | Requirement |
+| ID | Functional Requirement |
 |---|---|
-| FR1 | System shall provide Admin login. |
-| FR2 | System shall provide Sub-Admin login. |
-| FR3 | System shall provide Student/Teacher login. |
-| FR4 | Admin shall manage users. |
-| FR5 | Admin/Sub-Admin shall manage students. |
-| FR6 | Admin/Sub-Admin shall manage teachers. |
-| FR7 | Authorized users shall view attendance. |
-| FR8 | Student/Teacher shall be able to mark their attendance according to the implemented role rules. |
-| FR9 | Admin/Sub-Admin shall manually mark or override attendance. |
-| FR10 | System shall prevent duplicate attendance for the same user, date, and subject. |
-| FR11 | System shall validate dates and attendance status. |
-| FR12 | System shall store records persistently. |
-| FR13 | System shall calculate attendance percentage. |
-| FR14 | System shall support record update and deletion. |
+| FR1 | The system shall provide Admin login. |
+| FR2 | The system shall provide Sub-Admin login. |
+| FR3 | The system shall provide Student/Teacher login. |
+| FR4 | Admin shall manage Admin/Sub-Admin users. |
+| FR5 | Authorized users shall manage student records. |
+| FR6 | Authorized users shall manage teacher records. |
+| FR7 | Users shall view applicable attendance records. |
+| FR8 | Students and teachers shall be able to mark their own attendance. |
+| FR9 | Admin/Sub-Admin shall be able to mark or override attendance. |
+| FR10 | The system shall prevent duplicate attendance. |
+| FR11 | The system shall validate input data. |
+| FR12 | The system shall store records persistently. |
+| FR13 | The system shall calculate attendance percentage. |
+| FR14 | The system shall support record update and deletion. |
 
 ## 3.6 Non-Functional Requirements
 
-### Usability
-The system should provide understandable menus and messages.
+### 3.6.1 Usability
 
-### Reliability
-The system should validate files and input before performing important operations.
+The system should provide simple menu-driven interaction and understandable messages.
 
-### Maintainability
-The project is separated into header and source files, making maintenance easier.
+### 3.6.2 Reliability
 
-### Portability
-The source code uses standard C++ facilities and can be compiled using a compatible C++ compiler.
+The system should validate input and file structures before performing important operations.
 
-### Security
-The system uses role checking and XOR-based credential obfuscation. However, XOR is not a modern secure password-storage technique.
+### 3.6.3 Maintainability
 
-### Performance
-The system is appropriate for small datasets. Searches use sequential file reading, so performance may decrease with large datasets.
+The project is divided into header and source files and uses a common base class for shared functionality.
 
-## 3.7 Hardware Requirements
+### 3.6.4 Performance
 
-Minimum practical requirements:
+The current system is suitable for small datasets. Most searches are sequential and therefore may become slower as the number of records increases.
 
-- Processor: Dual-core or equivalent.
-- RAM: 2 GB or above.
-- Storage: At least 100 MB free space.
-- Keyboard and monitor.
-- Operating system capable of running a C++ compiler.
+### 3.6.5 Security
 
-## 3.8 Software Requirements
+The system checks credentials and user roles. The current credential protection uses XOR-based obfuscation, which is not equivalent to modern password hashing.
 
-- C++ compiler supporting standard C++ features.
-- GNU g++ or another compatible compiler.
-- Windows/Linux environment.
-- Text editor or IDE such as Visual Studio Code.
-- Command-line terminal.
+## 3.7 Feasibility of the Proposed Solution
 
-The repository includes a compilation example:
+### 3.7.1 Technical Feasibility
 
-`g++ src/*.cpp -Iinclude -o project`
+The system can be implemented using standard C++ facilities and does not require a database server.
 
-On Windows, the generated program can be executed using:
+### 3.7.2 Economic Feasibility
 
-`.project.exe`
+The project has low implementation cost because it uses local storage and commonly available development tools.
 
-## 3.9 User Roles and Permissions
+### 3.7.3 Operational Feasibility
 
-| Role | Main Permissions |
-|---|---|
-| Admin | User management, student management, teacher management, attendance viewing, attendance override, system configuration |
-| Sub-Admin | Student/teacher management, attendance viewing, attendance override |
-| Student | Login, view own attendance, mark own attendance, view personal details |
-| Teacher | Login, view attendance, mark own attendance, view personal details |
+The menu-driven interface is simple enough for basic users to operate after a short introduction.
+
+### 3.7.4 Schedule Feasibility
+
+The system can be developed in stages: requirement analysis, design, authentication, record management, attendance implementation, testing, and documentation.
 
 ---
 
-# CHAPTER FOUR: SYSTEM DESIGN
+# CHAPTER 4: DESIGN SPECIFICATION AND IMPLEMENTATION
 
 ## 4.1 System Architecture
 
-The system follows a modular object-oriented architecture.
+The system follows a simple modular architecture consisting of three major layers.
 
-**User Interface Layer**
-- Main menu
-- Login menus
-- Role-specific panels
-- Management menus
+### 4.1.1 User Interface Layer
 
-**Application Logic Layer**
-- Authentication
-- User management
-- Student management
-- Teacher management
-- Attendance management
-- Validation
+This layer includes:
 
-**Persistence Layer**
-- Binary files
-- Temporary files for record rewriting
+- Main menu.
+- Login menus.
+- Admin panel.
+- Sub-Admin panel.
+- Student/Teacher panel.
 
-### Figure 4.1: Overall Architecture
+### 4.1.2 Application Logic Layer
+
+This layer performs:
+
+- Authentication.
+- User management.
+- Student management.
+- Teacher management.
+- Attendance management.
+- Validation.
+- Searching.
+- Updating.
+- Deleting.
+
+### 4.1.3 Data Storage Layer
+
+This layer stores information in binary files.
+
+The architecture can be represented as:
+
+**Figure 4.1: System Architecture**
 
 ```
-+------------------------------+
-|        User Interface        |
-| Main Menu / Role Panels      |
-+--------------+---------------+
-               |
-               v
-+------------------------------+
-|     AuthenticationBase       |
-| Authentication / Validation  |
-| User / Student / Teacher     |
-| Attendance Operations        |
-+--------------+---------------+
-               |
-               v
-+------------------------------+
-|       Binary File Layer      |
-| credentials.dat              |
-| students.dat                 |
-| teachers.dat                 |
-| staff.dat                    |
-| attendance.dat               |
-+------------------------------+
++------------------------------------------------+
+|                USER INTERFACE                  |
+| Main Menu | Admin | Sub-Admin | Student/Teacher|
++--------------------------+---------------------+
+                           |
+                           v
++------------------------------------------------+
+|              APPLICATION LOGIC                |
+| Authentication | Validation | User Management |
+| Student | Teacher | Attendance | Search/Update |
++--------------------------+---------------------+
+                           |
+                           v
++------------------------------------------------+
+|                 FILE STORAGE                  |
+| credentials.dat | students.dat | teachers.dat|
+| staff.dat | attendance.dat                    |
++------------------------------------------------+
 ```
 
-## 4.2 Module Design
+## 4.2 Context Diagram
 
-### 4.2.1 Main Module
+The context diagram represents the complete system as one process and shows the interaction between external users and the system.
 
-The `main.cpp` file creates:
+**Figure 4.2: Context Diagram**
 
-- `AdminPanel`
-- `SubAdminPanel`
-- `StudentTeacherPanel`
+```
+                   +----------------+
+                   |     Admin      |
+                   +-------+--------+
+                           |
+                           | Manage users,
+                           | students, teachers,
+                           | attendance
+                           v
++----------------+   +---------------------------+   +----------------+
+|   Sub-Admin    |-->| Smart Attendance          |<--|    Student     |
++----------------+   | Management System         |   +----------------+
+                     +-------------+-------------+
+                                   ^
+                                   |
+                                   |
+                            +------+-------+
+                            |    Teacher   |
+                            +--------------+
+```
 
-It displays the main menu and directs users to the appropriate login and panel.
+### External Entities
 
-### 4.2.2 Authentication Module
+- **Admin:** manages administrative accounts, records, attendance, and configuration.
+- **Sub-Admin:** manages student/teacher records and attendance.
+- **Student:** views and marks personal attendance.
+- **Teacher:** views and marks personal attendance.
 
-The `AuthenticationBase` class contains common authentication and record-management functionality.
+## 4.3 Level 1 Data Flow Diagram
 
-Major functions include:
+The Level 1 DFD decomposes the system into major processes.
 
-- `findUser()`
-- `verifyCredentials()`
-- `addUser()`
-- `updateUserCredentials()`
-- `deleteUser()`
+**Figure 4.3: Level 1 Data Flow Diagram**
 
-### 4.2.3 Student Module
+```
+                 +----------------+
+                 |      User      |
+                 +-------+--------+
+                         |
+                         v
+                +-------------------+
+                | 1.0 Authentication|
+                +---------+---------+
+                          |
+                          v
+                +-------------------+
+                | 2.0 User/Profile  |
+                |     Management    |
+                +---------+---------+
+                          |
+             +------------+-------------+
+             |                          |
+             v                          v
+     +---------------+          +----------------+
+     | 3.0 Attendance|          | 4.0 Validation |
+     |    Management|          |   and Search   |
+     +-------+-------+          +-------+--------+
+             |                          |
+             +------------+-------------+
+                          |
+                          v
+                +-------------------+
+                |   Binary Files    |
+                | credentials.dat   |
+                | students.dat      |
+                | teachers.dat      |
+                | staff.dat         |
+                | attendance.dat    |
+                +-------------------+
+```
 
-The student module provides:
+## 4.4 Data Dictionary
 
-- Add student.
-- Search student.
-- Update student.
-- Delete student.
-- List all students.
-- View student details.
-- View student attendance.
+The system uses fixed-size structures stored in binary files.
 
-### 4.2.4 Teacher Module
+### Table 4.1: Data Dictionary
 
-The teacher module provides:
+| Data Entity | Field | Description |
+|---|---|---|
+| UserRecord | username | User login name |
+| UserRecord | password | User password/obfuscated credential field |
+| UserRecord | role | User role |
+| StudentRecord | username | Student account name |
+| StudentRecord | name | Student name |
+| StudentRecord | dateOfBirth | Student birth date |
+| StudentRecord | rollNumber | Student roll number |
+| StudentRecord | semester | Student semester |
+| StudentRecord | subject | Student subject/course |
+| StudentRecord | program | Academic program |
+| StudentRecord | section | Class section |
+| TeacherRecord | username | Teacher account name |
+| TeacherRecord | teacherId | Unique teacher ID |
+| TeacherRecord | name | Teacher name |
+| TeacherRecord | dateOfBirth | Teacher birth date |
+| TeacherRecord | department | Teacher department |
+| TeacherRecord | qualification | Teacher qualification |
+| StaffRecord | username | Staff account name |
+| StaffRecord | role | Admin/Sub-Admin role |
+| StaffRecord | name | Staff name |
+| StaffRecord | dateOfBirth | Staff birth date |
+| StaffRecord | department | Staff department |
+| AttendanceRecord | username | Account associated with attendance |
+| AttendanceRecord | role | Student/Teacher role |
+| AttendanceRecord | rollNumber | Student roll number where applicable |
+| AttendanceRecord | semester | Student semester where applicable |
+| AttendanceRecord | subject | Attendance subject |
+| AttendanceRecord | date | Attendance date |
+| AttendanceRecord | status | Present, Absent, or Late |
+| AttendanceRecord | markedBy | User who marked attendance |
 
-- Add teacher.
-- Search/view teacher.
-- Update teacher.
-- Delete teacher.
-- View teacher attendance.
-
-### 4.2.5 Attendance Module
-
-The attendance module provides:
-
-- Mark attendance.
-- Check duplicate attendance.
-- Update attendance.
-- View attendance history.
-- Calculate attendance percentage.
-- Manual attendance override.
-
-## 4.3 Data/File Design
-
-The project uses fixed-size C++ structures and binary files.
-
-### Table 4.1: Data Files
+### File Dictionary
 
 | File | Purpose |
 |---|---|
-| credentials.dat | Stores username, password and role |
-| students.dat | Stores student profile and academic information |
-| teachers.dat | Stores teacher profile information |
-| staff.dat | Stores Admin/Sub-Admin staff information |
-| attendance.dat | Stores attendance records |
-| *_temp.dat | Temporary files used during record rewriting |
+| `credentials.dat` | Stores login credentials and roles |
+| `students.dat` | Stores student records |
+| `teachers.dat` | Stores teacher records |
+| `staff.dat` | Stores Admin/Sub-Admin staff records |
+| `attendance.dat` | Stores attendance records |
+| `*_temp.dat` | Temporary files used during updates/deletions |
 
-### UserRecord
+## 4.5 Working Procedure
 
-Fields:
+The overall working procedure is:
 
-- username
-- password
-- role
+1. Start the application.
+2. Display the main menu.
+3. Select the required login type.
+4. Enter username and password.
+5. For Student/Teacher login, select the applicable role.
+6. Verify credentials.
+7. Open the appropriate role panel.
+8. Select the required operation.
+9. Validate the input.
+10. Read, create, update, or delete the required record.
+11. Save changes to the appropriate binary file.
+12. Display the result.
+13. Continue using the panel or log out.
+14. Exit the application.
 
-### StudentRecord
+### Attendance Working Procedure
 
-Fields:
+1. User logs in.
+2. User selects **Mark My Attendance**.
+3. System identifies the current user and role.
+4. System loads the relevant profile.
+5. System obtains the current date.
+6. System checks whether an attendance record already exists.
+7. If a duplicate exists, the system rejects the new entry.
+8. If no duplicate exists, a new attendance record is created.
+9. The record is written to `attendance.dat`.
+10. A success or failure message is displayed.
 
-- username
-- name
-- dateOfBirth
-- rollNumber
-- semester
-- subject
-- program
-- section
+## 4.6 Flowchart Diagram
 
-### TeacherRecord
+**Figure 4.4: Attendance Flowchart**
 
-Fields:
+```
+              START
+                |
+                v
+        Display Login Menu
+                |
+                v
+        Enter Login Details
+                |
+                v
+        Verify Credentials
+           /          \
+         No            Yes
+         |              |
+         v              v
+   Invalid Login    Open User Panel
+         |              |
+         |              v
+         |       Select Attendance
+         |              |
+         |              v
+         |       Load User Profile
+         |              |
+         |              v
+         |       Check Duplicate
+         |          /        \
+         |        Yes         No
+         |         |           |
+         |         v           v
+         |     Reject       Create Record
+         |                     |
+         |                     v
+         |               Save Attendance
+         |                     |
+         +----------+----------+
+                    |
+                    v
+                  END
+```
 
-- username
-- teacherId
-- name
-- dateOfBirth
-- department
-- qualification
+## 4.7 Use Case Diagram
 
-### StaffRecord
+**Figure 4.5: Use Case Diagram**
 
-Fields:
+```
+                  +--------------------------------------+
+                  | Smart Attendance Management System  |
+                  |                                      |
+ Admin ---------->| Login                                |
+   |              | Manage Admin/Sub-Admin Users        |
+   |              | Manage Students                     |
+   |              | Manage Teachers                     |
+   |              | View Attendance                     |
+   |              | Mark/Override Attendance            |
+   |              | System Configuration                |
+   |              |                                      |
+ Sub-Admin ------>| Login                                |
+   |              | Add/Manage Students and Teachers    |
+   |              | View Attendance                     |
+   |              | Mark/Override Attendance            |
+   |              |                                      |
+ Student -------->| Login                                |
+   |              | View Personal Details               |
+   |              | View Own Attendance                 |
+   |              | Mark Own Attendance                 |
+   |              |                                      |
+ Teacher -------->| Login                                |
+                  | View Personal Details               |
+                  | View Own Attendance                 |
+                  | Mark Own Attendance                 |
+                  +--------------------------------------+
+```
 
-- username
-- role
-- name
-- dateOfBirth
-- department
+## 4.8 Class Design and Module Structure
 
-### AttendanceRecord
+The system uses inheritance to share common functionality.
 
-Fields:
+**Figure 4.6: Class/Inheritance Structure**
 
-- username
-- role
-- rollNumber
-- semester
-- subject
-- date
-- status
-- markedBy
-
-## 4.4 Class Design
-
-The project uses inheritance to share common functionality.
+```
+                    AuthenticationBase
+                    /        |         \
+                   /         |          \
+                  v          v           v
+          AdminPanel   SubAdminPanel   StudentTeacherPanel
+```
 
 ### Table 4.2: Main Classes
 
 | Class | Responsibility |
 |---|---|
-| AuthenticationBase | Common authentication, records, validation and attendance operations |
-| AdminPanel | Administrator login and administrative menu |
-| SubAdminPanel | Sub-Administrator login and management menu |
-| StudentTeacherPanel | Student/Teacher login and personal attendance menu |
+| AuthenticationBase | Common authentication, validation, record, and attendance operations |
+| AdminPanel | Admin login, user management, system configuration, and administrative operations |
+| SubAdminPanel | Sub-Admin login and student/teacher/attendance management |
+| StudentTeacherPanel | Student/Teacher login and personal attendance operations |
 
-### Inheritance Relationship
+## 4.9 Implementation Details
 
-```
-                 AuthenticationBase
-                  /       |        \
-                 /        |         \
-                v         v          v
-         AdminPanel  SubAdminPanel  StudentTeacherPanel
-```
+### 4.9.1 Main Program
 
-This structure reduces duplication because common functions are defined in the base class.
+The `main.cpp` file creates the three panel objects:
 
-## 4.5 Use-Case Description
+- `AdminPanel`
+- `SubAdminPanel`
+- `StudentTeacherPanel`
 
-### Admin Use Cases
+It displays the main menu and directs the user to the selected login process.
 
-- Login.
-- Manage Admin/Sub-Admin accounts.
-- Manage students.
-- Manage teachers.
-- View attendance.
-- Override attendance.
-- View personal details.
-- View system configuration.
+### 4.9.2 Authentication Implementation
 
-### Sub-Admin Use Cases
+The `AuthenticationBase` class provides functions for:
 
-- Login.
-- Add students/teachers.
-- Manage students.
-- Manage teachers.
-- View attendance.
-- Override attendance.
-- View personal details.
+- Finding users.
+- Verifying credentials.
+- Adding users.
+- Updating credentials.
+- Deleting users.
+- Finding student and teacher records.
 
-### Student Use Cases
+The implemented default accounts are:
 
-- Login.
-- View own attendance.
-- Mark own attendance.
-- View personal details.
+- Admin username: `admin`
+- Admin password: `admin123`
+- Sub-Admin username: `subadmin`
+- Sub-Admin password: `sub123`
 
-### Teacher Use Cases
+These are development defaults and should not be treated as secure production credentials.
 
-- Login.
-- View own attendance.
-- Mark own attendance.
-- View personal details.
+### 4.9.3 Student and Teacher Implementation
 
-## 4.6 Data Flow
+Student and teacher records are stored separately in binary files. The system checks uniqueness of roll numbers and teacher IDs before creating records.
 
-### Main Data Flow
+### 4.9.4 Attendance Implementation
 
-```
-User
-  |
-  v
-Main Menu
-  |
-  v
-Role Selection
-  |
-  v
-Authentication
-  |
-  +---- Invalid ----> Error Message
-  |
-  +---- Valid ------> Role Panel
-                         |
-                         v
-                  Application Operations
-                         |
-                         v
-                    Binary Files
-```
+The attendance module supports:
 
-## 4.7 Attendance Workflow
+- Present.
+- Absent.
+- Late.
+- Duplicate checking.
+- Manual override.
+- Attendance history.
+- Attendance percentage.
 
-1. User logs in.
-2. System verifies username, password, and role.
-3. User selects attendance operation.
-4. System identifies the profile.
-5. System obtains date and subject information.
-6. System checks whether attendance already exists.
-7. If duplicate exists, the system prevents a second record.
-8. Otherwise, the attendance record is stored.
-9. The record can later be displayed from the attendance file.
-10. Attendance percentage is calculated from the number of Present records.
+### 4.9.5 File Handling
 
-## 4.8 Algorithms
+The project uses C++ binary file streams. New records are appended to files. For updates and deletions, temporary files are used to rewrite records safely.
 
-### Algorithm 1: User Login
+### 4.9.6 Credential Protection
 
-**Input:** Username, password, role  
-**Output:** Login success or failure
-
-1. Start.
-2. Read username.
-3. Read password.
-4. Read/select role.
-5. Validate the credentials file.
-6. Search the username.
-7. Decrypt the stored username and password fields using the implemented XOR transformation.
-8. Compare the username.
-9. Compare the password.
-10. Compare the role.
-11. If all values match, set current username and role.
-12. Display successful login.
-13. Otherwise display invalid credentials.
-14. Stop.
-
-### Algorithm 2: Add Student
-
-1. Start.
-2. Enter username and password.
-3. Verify that username does not already exist.
-4. Enter student information.
-5. Validate all required fields.
-6. Check date of birth.
-7. Check roll number uniqueness.
-8. Create a StudentRecord.
-9. Write the record to `students.dat`.
-10. If successful, keep the account and profile.
-11. Otherwise remove the incomplete account.
-12. Stop.
-
-### Algorithm 3: Search Student
-
-1. Start.
-2. Enter username, name, or roll number.
-3. Search by username.
-4. If not found, search by roll number.
-5. If not found, search by name.
-6. If found, display student details.
-7. Otherwise display “Student not found.”
-8. Stop.
-
-### Algorithm 4: Mark Attendance
-
-1. Start.
-2. Identify the user's role.
-3. Verify that the role is Student or Teacher.
-4. Load the appropriate profile.
-5. Determine roll number/teacher ID.
-6. Determine subject.
-7. Check whether an attendance record already exists for the same username, date, and subject.
-8. If it exists, reject duplicate creation.
-9. Otherwise create an AttendanceRecord.
-10. Save the record to `attendance.dat`.
-11. Stop.
-
-### Algorithm 5: Manual Attendance Override
-
-1. Start.
-2. Enter target username.
-3. Verify that the user exists.
-4. Verify that the user is Student or Teacher.
-5. Verify roll number or teacher ID.
-6. Get the current date.
-7. Enter attendance status.
-8. Validate Present, Absent, or Late.
-9. Check whether an attendance record already exists.
-10. If it exists, update its status and marked-by field.
-11. Otherwise create a new attendance record.
-12. Save the result.
-13. Stop.
-
-### Algorithm 6: Attendance Percentage
-
-1. Start.
-2. Read attendance records for a user.
-3. Apply semester/subject filters if supplied.
-4. Count total matching records.
-5. Count Present records.
-6. Calculate:
-   
-   **Attendance Percentage = (Present Records / Total Records) × 100**
-
-7. Display total records, present records, and percentage.
-8. Stop.
-
-### Algorithm 7: Delete Student
-
-1. Start.
-2. Enter student username.
-3. Search the student.
-4. Display details.
-5. Ask for confirmation.
-6. If confirmation is not given, cancel.
-7. Remove the student's attendance records.
-8. Remove the student's profile record.
-9. Remove the user's credentials.
-10. Report success or failure.
-11. Stop.
-
-## 4.9 Input Validation and Error Handling
-
-The system implements several validation mechanisms:
-
-- Checks for empty/oversized fields.
-- Checks username uniqueness.
-- Checks roll-number uniqueness.
-- Checks teacher-ID uniqueness.
-- Checks valid dates.
-- Checks valid birth dates.
-- Checks valid attendance status.
-- Checks binary file record sizes.
-- Detects corrupted file sizes.
-- Uses temporary files when rewriting records.
-- Prevents users from deleting their own currently active Admin account.
-- Checks that a profile exists for Student and Teacher credentials.
-- Prevents duplicate attendance.
+The current implementation uses a fixed XOR transformation for credential fields. This is only basic obfuscation and is reversible. It should not be considered modern password security.
 
 ---
 
-# CHAPTER FIVE: SYSTEM DEVELOPMENT AND IMPLEMENTATION
+# CHAPTER 5: EXPERIMENT RESULT AND ANALYSIS
 
-## 5.1 Development Environment
+## 5.1 Introduction
 
-The system was developed as a C++ console application.
+Testing is performed to determine whether the implemented system behaves according to its requirements and whether invalid inputs are handled correctly.
 
-### Development tools
+The experiments focus on authentication, record management, attendance management, validation, duplicate prevention, and percentage calculation.
 
-- Programming Language: C++
-- Compiler: g++
-- IDE/Text Editor: Visual Studio Code or compatible editor
-- Storage: Local binary files
-- Version Control: Git/GitHub
+## 5.2 Experiment Environment
 
-## 5.2 Programming Language
+### Table 5.1: Experiment Environment
 
-C++ was selected because the project is intended to demonstrate object-oriented programming concepts. The implementation uses:
+| Component | Environment |
+|---|---|
+| Programming Language | C++ |
+| Compiler | g++ |
+| Development Environment | Visual Studio Code or compatible IDE |
+| Operating System | Windows/Linux compatible environment |
+| Storage | Local binary files |
+| Version Control | Git/GitHub |
+| Main Input | Keyboard |
+| Interface | Console |
 
-- Classes.
-- Inheritance.
-- Encapsulation.
-- Constructors.
-- Member functions.
-- Structures.
-- Strings.
-- File streams.
-- Vectors.
-- Input/output operations.
-- Function decomposition.
+The project can be compiled using:
 
-## 5.3 Project Structure
+```bash
+g++ src/*.cpp -Iinclude -o project
+```
 
-The repository contains the following major files:
+On Windows, the executable can be run using:
+
+```powershell
+.\project.exe
+```
+
+## 5.3 Testing Scenarios
+
+The following scenarios cover the main functions of the project:
+
+1. Valid Admin login.
+2. Invalid Admin login.
+3. Valid Sub-Admin login.
+4. Valid Student login.
+5. Valid Teacher login.
+6. Adding a student.
+7. Adding a duplicate student username.
+8. Adding a duplicate roll number.
+9. Searching for a student.
+10. Updating a student.
+11. Deleting a student.
+12. Adding a teacher.
+13. Adding a duplicate teacher ID.
+14. Updating a teacher.
+15. Marking attendance.
+16. Attempting duplicate attendance.
+17. Manual attendance override.
+18. Invalid attendance status.
+19. Viewing attendance.
+20. Calculating attendance percentage.
+
+## 5.4 Experiment and Result
+
+### Table 5.2: Testing Scenarios and Results
+
+| Test ID | Experiment | Expected Result | Result/Status |
+|---|---|---|---|
+| TC01 | Enter valid Admin credentials | Admin panel opens | Verify during final run |
+| TC02 | Enter wrong password | Login rejected | Verify during final run |
+| TC03 | Enter valid Sub-Admin credentials | Sub-Admin panel opens | Verify during final run |
+| TC04 | Enter valid Student credentials | Student panel opens | Verify during final run |
+| TC05 | Enter valid Teacher credentials | Teacher panel opens | Verify during final run |
+| TC06 | Add unique student | Student record created | Verify during final run |
+| TC07 | Add existing username | Operation rejected | Verify during final run |
+| TC08 | Add existing roll number | Operation rejected | Verify during final run |
+| TC09 | Search student | Matching record displayed | Verify during final run |
+| TC10 | Update student | Updated record stored | Verify during final run |
+| TC11 | Delete student | Student and related data removed | Verify during final run |
+| TC12 | Add teacher with unique ID | Teacher created | Verify during final run |
+| TC13 | Add duplicate teacher ID | Operation rejected | Verify during final run |
+| TC14 | Update teacher | Teacher record updated | Verify during final run |
+| TC15 | Mark attendance | Attendance record stored | Verify during final run |
+| TC16 | Mark same attendance again | Duplicate prevented | Verify during final run |
+| TC17 | Override attendance | Existing status updated | Verify during final run |
+| TC18 | Enter invalid status | Input rejected | Verify during final run |
+| TC19 | View attendance | Attendance history displayed | Verify during final run |
+| TC20 | Calculate percentage | Correct percentage displayed | Verify during final run |
+
+**Important:** The source repository contains the implementation but does not provide an independent laboratory test log. Therefore, the final academic report should replace the “Verify during final run” entries with the actual observed result after executing the final build and should include screenshots of important test cases.
+
+## 5.5 Result Analysis
+
+The implementation provides mechanisms corresponding to the major requirements of the system.
+
+### 5.5.1 Authentication Analysis
+
+The code provides separate authentication functions for Admin, Sub-Admin, and Student/Teacher users. The Student/Teacher login also checks whether the selected role is Student or Teacher.
+
+### 5.5.2 Record Management Analysis
+
+The system provides functions for creating, searching, updating, and deleting records. Temporary files are used for record-rewrite operations.
+
+### 5.5.3 Attendance Analysis
+
+Attendance is associated with a username, role, date, subject, status, and user who marked the attendance. The system checks for an existing record before creating another one.
+
+### 5.5.4 Validation Analysis
+
+The project contains validation functions for dates, status, field sizes, duplicate usernames, roll numbers, teacher IDs, and menu input.
+
+### 5.5.5 Storage Analysis
+
+The binary-file approach is simple and suitable for the academic project. However, sequential searching and fixed-size records make the design less suitable for large-scale institutional use.
+
+### 5.5.6 Security Analysis
+
+The project uses role checking and XOR-based credential obfuscation. Because XOR obfuscation is reversible, the current implementation should be improved with secure password hashing before real-world deployment.
+
+---
+
+# CHAPTER 6: CONCLUSION AND FUTURE WORK
+
+## 6.1 Conclusion
+
+The **Smart Attendance Management System** provides a computerized method for managing user accounts, student records, teacher records, and attendance information.
+
+The project successfully demonstrates important C++ and object-oriented programming concepts including classes, inheritance, encapsulation, constructors, member functions, structures, file handling, validation, and modular programming.
+
+The system provides role-based access for Admin, Sub-Admin, Student, and Teacher users. It supports student and teacher management, attendance marking, attendance viewing, duplicate prevention, attendance percentage calculation, and administrative attendance override.
+
+The project also demonstrates persistent storage using binary files. Although this approach is simple and suitable for an academic project, it has limitations when the number of records becomes large.
+
+Overall, the project provides a practical example of applying second-semester BIT programming concepts to an attendance-management problem.
+
+## 6.2 Limitations
+
+The current system has the following limitations:
+
+1. It uses binary files instead of a relational database.
+2. Most searches are sequential.
+3. The interface is console-based.
+4. The system is mainly intended for local use.
+5. It does not provide web or mobile access.
+6. It does not support remote multi-user operation.
+7. Credential protection uses reversible XOR obfuscation rather than secure password hashing.
+8. Advanced reporting and data export are limited.
+9. There is no cloud backup.
+10. It is not integrated with QR, RFID, or biometric devices.
+
+## 6.3 Future Work
+
+The system can be extended in the following ways:
+
+1. Replace binary files with SQLite, MySQL, PostgreSQL, or another database.
+2. Implement secure password hashing.
+3. Develop a graphical user interface.
+4. Develop a web-based system.
+5. Develop a mobile application.
+6. Add QR-code attendance.
+7. Add RFID-based attendance.
+8. Add biometric attendance.
+9. Add automated email or SMS notifications.
+10. Add PDF and spreadsheet reports.
+11. Add graphical attendance dashboards.
+12. Add subject-wise and semester-wise reporting.
+13. Add audit logs.
+14. Add automated backup and restore.
+15. Add cloud-based storage.
+16. Add concurrent multi-user access.
+
+---
+
+# REFERENCES
+
+1. Purbanchal University, **Bachelor of Information Technology (BIT) Curriculum**, Faculty of Science and Technology.
+
+2. Purbanchal University, **Project-II (BIT156CO)**, Bachelor of Information Technology.
+
+3. Balagurusamy, E., **Object Oriented Programming with C++**, McGraw Hill Education.
+
+4. Schildt, H., **C++: The Complete Reference**, McGraw Hill.
+
+5. Stroustrup, B., **The C++ Programming Language**, Addison-Wesley.
+
+6. C++ Standard Library documentation and learning resources consulted during implementation.
+
+7. Project source code maintained in the GitHub repository **Smart_Attendance_System_II-Semester**.
+
+---
+
+# BIBLIOGRAPHY
+
+Bibliography may include additional books, websites, tutorials, and learning materials consulted during the development of the project.
+
+---
+
+# APPENDIX A: USER MANUAL
+
+## A.1 Starting the Application
+
+Compile the project:
+
+```bash
+g++ src/*.cpp -Iinclude -o project
+```
+
+Run on Windows:
+
+```powershell
+.\project.exe
+```
+
+## A.2 Main Menu
+
+The main menu provides:
+
+1. Admin Login
+2. Sub-Admin Login
+3. Student / Teacher Login
+4. System Help
+5. Exit
+
+## A.3 Admin Login
+
+Development default:
+
+- Username: `admin`
+- Password: `admin123`
+
+## A.4 Sub-Admin Login
+
+Development default:
+
+- Username: `subadmin`
+- Password: `sub123`
+
+## A.5 Student/Teacher Login
+
+The user enters:
+
+- Username.
+- Password.
+- Role: S for Student or T for Teacher.
+
+## A.6 Marking Attendance
+
+1. Log in as Student or Teacher.
+2. Select **Mark My Attendance**.
+3. The system identifies the current user.
+4. The current date is obtained.
+5. The system checks for duplicate attendance.
+6. If no duplicate exists, attendance is saved.
+
+## A.7 Manual Attendance Override
+
+Admin/Sub-Admin users can:
+
+1. Select attendance override.
+2. Enter the target username.
+3. Verify the target profile.
+4. Select Present, Absent, or Late.
+5. Update an existing record or create a new record.
+
+---
+
+# APPENDIX B: PROJECT FILE STRUCTURE
 
 ```
 Smart_Attendance_System_II-Semester/
@@ -1051,701 +1268,112 @@ Smart_Attendance_System_II-Semester/
 +-- README.md
 ```
 
-### Table 5.1: Source Files
-
-| File | Purpose |
-|---|---|
-| main.cpp | Main application entry point |
-| Common.h | Shared constants, structures and helper declarations |
-| Common.cpp | Common helper implementation |
-| AuthenticationBase.h | Base class declaration |
-| AuthenticationBase.cpp | Authentication, management and attendance logic |
-| Panels.h | Role-specific class declarations |
-| Panels.cpp | Role-specific login and menu implementation |
-
-## 5.4 Authentication Module
-
-The authentication system stores user credentials in `credentials.dat`.
-
-Each user has:
-
-- Username.
-- Password.
-- Role.
-
-The `verifyCredentials()` function searches for the username and checks both password and role before granting access.
-
-The system initializes default administrative accounts when required:
-
-- Admin account: `admin`
-- Sub-Admin account: `subadmin`
-
-The corresponding default passwords are defined in the implementation and should be changed in a production system.
-
-## 5.5 User Management Module
-
-The Admin panel provides:
-
-- Add Admin/Sub-Admin.
-- View user details.
-- Search user.
-- Update Admin/Sub-Admin credentials.
-- Delete user.
-
-The system prevents deletion of the account currently being used by the Admin.
-
-## 5.6 Student Management Module
-
-Student records contain personal and academic information.
-
-The module supports:
-
-- Add student.
-- Search by username.
-- Search by roll number.
-- Search by name.
-- Update student.
-- Delete student.
-- View student details.
-- List all students.
-- View attendance.
-- View all student attendance by date.
-
-The system checks roll-number uniqueness before adding or changing a student.
-
-## 5.7 Teacher Management Module
-
-Teacher records include:
-
-- Username.
-- Teacher ID.
-- Name.
-- Date of birth.
-- Department.
-- Qualification.
-
-The module supports:
-
-- Add teacher.
-- View/search teacher.
-- Update teacher details.
-- Delete teacher.
-- View teacher attendance.
-
-Teacher ID uniqueness is checked during record creation.
-
-## 5.8 Attendance Module
-
-Attendance records include:
-
-- Username.
-- Role.
-- Roll number or teacher ID.
-- Semester.
-- Subject.
-- Date.
-- Status.
-- Marked by.
-
-Supported statuses are:
-
-- Present
-- Absent
-- Late
-
-The system prevents duplicate records based on username, date, and subject.
-
-The manual override facility allows Admin/Sub-Admin users to update an existing attendance record or create a new one.
-
-## 5.9 File Handling Module
-
-The project uses C++ binary file streams.
-
-### Append Operation
-
-New records are written using binary append mode.
-
-### Read Operation
-
-Records are read sequentially using `ifstream`.
-
-### Update Operation
-
-Because fixed-size binary records are stored in files, updates are performed by:
-
-1. Opening the original file for reading.
-2. Opening a temporary file for writing.
-3. Reading records one by one.
-4. Replacing the target record.
-5. Writing all records to the temporary file.
-6. Closing both files.
-7. Replacing the original file with the temporary file.
-
-### Delete Operation
-
-Deletion follows a similar file-rewrite method, except the matching record is skipped.
-
-This method is implemented for user, student, teacher, and attendance data.
-
-## 5.10 Data Validation
-
-The `Common.cpp` module contains helper functions for:
-
-- Current date generation.
-- Date validation.
-- Birth-date validation.
-- Attendance status validation.
-- Case-insensitive comparison.
-- Field-size validation.
-- Safe string copying.
-- File replacement.
-- Menu input validation.
-
-## 5.11 Security and Credential Protection
-
-The project uses an XOR transformation with a fixed key for username/password fields before writing credential records to the binary file.
-
-This should be described as **obfuscation**, not strong encryption. A fixed XOR key is reversible and does not provide modern password security.
-
-For a production version, password hashing with a modern password-hashing algorithm and secure authentication practices should be implemented.
-
-## 5.12 User Interface
-
-The system provides a menu-driven console interface.
-
-### Main Menu
-
-1. Admin Login
-2. Sub-Admin Login
-3. Student / Teacher Login
-4. System Help
-5. Exit
-
-### Admin Panel
-
-1. User Management
-2. Student Management
-3. Teacher Management
-4. View User Attendance
-5. Manual Attendance Mark/Override
-6. System Configuration
-7. View My Personal Details
-8. Logout
-
-### Sub-Admin Panel
-
-1. Add Student/Teacher
-2. Student Management
-3. Teacher Management
-4. View Attendance
-5. Manual Attendance Override
-6. View My Personal Details
-7. Logout
-
-### Student/Teacher Panel
-
-1. View My Attendance
-2. Mark My Attendance
-3. View My Personal Details
-4. Logout
-
 ---
 
-# CHAPTER SIX: SYSTEM TESTING
+# APPENDIX C: MAIN ALGORITHMS
 
-## 6.1 Testing Introduction
-
-Testing is performed to determine whether the system behaves according to its functional requirements and handles invalid inputs appropriately.
-
-Because this is an academic local application, testing focuses mainly on:
-
-- Authentication.
-- Record creation.
-- Searching.
-- Updating.
-- Deletion.
-- Attendance.
-- Duplicate prevention.
-- Validation.
-- File handling.
-
-## 6.2 Testing Strategy
-
-The system can be tested using:
-
-1. Unit-level testing of individual functions.
-2. Module testing.
-3. Integration testing.
-4. Functional testing.
-5. Validation testing.
-6. Error-handling testing.
-
-## 6.3 Functional Test Cases
-
-| ID | Test Case | Input/Action | Expected Result |
-|---|---|---|---|
-| TC01 | Admin Login | Valid Admin credentials | Admin panel opens |
-| TC02 | Invalid Login | Wrong password | Login rejected |
-| TC03 | Sub-Admin Login | Valid Sub-Admin credentials | Sub-Admin panel opens |
-| TC04 | Student Login | Valid student credentials and S role | Student panel opens |
-| TC05 | Teacher Login | Valid teacher credentials and T role | Teacher panel opens |
-| TC06 | Add Student | Unique username and roll number | Student created |
-| TC07 | Duplicate Username | Existing username | Creation rejected |
-| TC08 | Duplicate Roll | Existing roll number | Creation rejected |
-| TC09 | Search Student | Valid name/username/roll | Student details displayed |
-| TC10 | Update Student | Valid new information | Student record updated |
-| TC11 | Delete Student | Confirm deletion | Student and related attendance removed |
-| TC12 | Add Teacher | Unique teacher ID | Teacher created |
-| TC13 | Duplicate Teacher ID | Existing ID | Creation rejected |
-| TC14 | Update Teacher | Valid new details | Teacher updated |
-| TC15 | Mark Attendance | Valid student/teacher | Attendance saved |
-| TC16 | Duplicate Attendance | Same user/date/subject | Duplicate rejected |
-| TC17 | Override Attendance | Existing attendance | Status updated |
-| TC18 | Invalid Status | Invalid status | Operation rejected |
-| TC19 | View Attendance | Existing records | History displayed |
-| TC20 | Percentage | Attendance records | Percentage calculated |
-
-## 6.4 Validation Test Cases
-
-| ID | Validation | Expected Behavior |
-|---|---|---|
-| VT01 | Empty username | Reject input |
-| VT02 | Oversized field | Reject input |
-| VT03 | Invalid date | Reject input |
-| VT04 | Invalid attendance status | Reject input |
-| VT05 | Duplicate username | Reject creation |
-| VT06 | Duplicate roll number | Reject creation |
-| VT07 | Duplicate teacher ID | Reject creation |
-| VT08 | Corrupted record size | Display file corruption error |
-| VT09 | Missing profile | Prevent inconsistent Student/Teacher account |
-| VT10 | Delete active Admin account | Prevent deletion |
-
-## 6.5 Error Handling Tests
-
-The system includes messages for:
-
-- Invalid credentials.
-- Missing user.
-- Missing student/teacher profile.
-- Invalid role.
-- Invalid date.
-- Invalid attendance status.
-- Duplicate records.
-- File opening errors.
-- Corrupted file record size.
-- Failed update/deletion.
-
-## 6.6 Testing Limitations
-
-The repository contains the implementation and executable, but a formal laboratory test log, screenshots, test-data sheet, and independent test report are not part of the source repository. Therefore, before final academic submission, the project team should execute the listed test cases on the final build and record actual results and screenshots.
-
----
-
-# CHAPTER SEVEN: LIMITATIONS, FUTURE ENHANCEMENTS AND CONCLUSION
-
-## 7.1 Limitations
-
-The current implementation has the following limitations:
-
-### 7.1.1 Binary File Storage
-
-The project stores records in binary files instead of a database. This is suitable for demonstrating file handling but is less flexible than a database system.
-
-### 7.1.2 Sequential Searching
-
-Most searches read records sequentially. With a large number of records, this may reduce performance.
-
-### 7.1.3 Console Interface
-
-The user interface is text-based. It does not provide a graphical, web, or mobile interface.
-
-### 7.1.4 Local Operation
-
-The system is designed for local execution and does not provide centralized remote access.
-
-### 7.1.5 Basic Credential Protection
-
-The XOR method used by the project is reversible and should not be treated as secure password encryption.
-
-### 7.1.6 Limited Reporting
-
-The current implementation provides attendance history and percentage information but does not provide advanced report generation, PDF export, graphical statistics, or automated institutional reports.
-
-## 7.2 Future Enhancements
-
-The system can be improved in the following ways:
-
-1. Replace binary files with MySQL, PostgreSQL, SQLite, or another database.
-2. Use secure password hashing.
-3. Develop a graphical user interface.
-4. Develop a web-based interface.
-5. Develop an Android/mobile application.
-6. Add QR-code attendance.
-7. Add RFID-based attendance.
-8. Add biometric attendance.
-9. Add automated email/SMS notifications.
-10. Add PDF and Excel attendance reports.
-11. Add attendance charts and dashboards.
-12. Add subject-wise and semester-wise reports.
-13. Add role and permission configuration.
-14. Add audit logs.
-15. Add automated backup and restore.
-16. Add cloud-based storage.
-17. Add multi-user concurrent access.
-18. Add stronger database transaction and recovery mechanisms.
-
-## 7.3 Conclusion
-
-The **Smart Attendance Management System** successfully demonstrates the development of a practical C++ application for managing users, students, teachers, and attendance records.
-
-The project applies important concepts of object-oriented programming such as classes, inheritance, encapsulation, constructors, and member functions. It also demonstrates binary file handling, record searching, updating, deletion, validation, authentication, and modular programming.
-
-The role-based design separates the responsibilities of administrators, sub-administrators, students, and teachers. Attendance functionality includes duplicate prevention, status validation, attendance history, percentage calculation, and administrative override.
-
-Although the current system has limitations such as binary-file storage, sequential searching, a console interface, and basic credential obfuscation, it provides a useful foundation for further development. With database integration, secure authentication, web/mobile access, automated attendance technologies, and advanced reporting, the system could be extended into a more complete institutional attendance platform.
-
-Overall, the project meets its academic purpose by applying second-semester BIT programming and object-oriented concepts to a real-world attendance management problem.
-
----
-
-# REFERENCES
-
-1. Purbanchal University, **Bachelor of Information Technology (BIT) Curriculum**, Faculty of Science and Technology.
-
-2. Purbanchal University, **Project-II (BIT156CO)**, Bachelor of Information Technology, Second Semester.
-
-3. Balagurusamy, E., **Object Oriented Programming with C++**, McGraw Hill Education.
-
-4. Schildt, H., **C++: The Complete Reference**, McGraw Hill.
-
-5. Stroustrup, B., **The C++ Programming Language**, Addison-Wesley.
-
-6. The project source code and implementation files maintained in the project's GitHub repository.
-
----
-
-# APPENDIX 1: USER MANUAL
-
-## A1.1 Starting the Application
-
-Compile the project using:
-
-```bash
-g++ src/*.cpp -Iinclude -o project
-```
-
-Run the application on Windows using:
-
-```powershell
-.\project.exe
-```
-
-## A1.2 Main Menu
-
-After starting, the system displays:
-
-1. Admin Login
-2. Sub-Admin Login
-3. Student / Teacher Login
-4. System Help
-5. Exit
-
-Select the required option by entering the menu number.
-
-## A1.3 Admin Login
-
-The system initially creates the default administrator account defined in the source code.
-
-**Default username:** `admin`  
-**Default password:** `admin123`
-
-For actual deployment, the default password should be changed immediately.
-
-## A1.4 Sub-Admin Login
-
-**Default username:** `subadmin`  
-**Default password:** `sub123`
-
-For actual deployment, the default password should be changed immediately.
-
-## A1.5 Creating a Student
-
-1. Log in as Admin or Sub-Admin.
-2. Open Student Management.
-3. Select Add Student.
-4. Enter username and password.
-5. Enter student name.
-6. Enter date of birth.
-7. Enter roll number.
-8. Enter semester.
-9. Enter subject/course.
-10. Enter program.
-11. Enter section.
-12. Submit the information.
-
-The system validates the information and stores the account/profile if the data is valid.
-
-## A1.6 Searching a Student
-
-1. Open Student Management.
-2. Select Search Student.
-3. Enter username, name, or roll number.
-4. The system displays the matching student record.
-
-## A1.7 Marking Attendance
-
-1. Log in using a Student or Teacher account.
-2. Select Mark My Attendance.
-3. The system determines the current date.
-4. The system checks for an existing attendance record.
-5. If no duplicate exists, attendance is saved.
-
-## A1.8 Manual Attendance Override
-
-Admin/Sub-Admin users can:
-
-1. Select Manual Attendance Mark/Override.
-2. Enter target username.
-3. Verify the student's roll number or teacher ID.
-4. Select Present, Absent, or Late.
-5. If a record already exists, update it.
-6. Otherwise create a new record.
-
----
-
-# APPENDIX 2: PROJECT ALGORITHMS SUMMARY
-
-## Authentication Algorithm
+## C.1 Login Algorithm
 
 ```
 START
- |
+  |
 Read username, password and role
- |
-Search credentials file
- |
+  |
+Search credentials
+  |
 User found?
- |---- No ----> Invalid Login -> STOP
- |
-Yes
- |
-Compare password and role
- |
-Match?
- |---- No ----> Invalid Login -> STOP
- |
-Yes
- |
-Set current user and role
- |
-Open role-specific panel
- |
-STOP
+ /       \
+No        Yes
+|          |
+Invalid    Compare password and role
+Login      |
+           v
+        Match?
+       /      \
+     No        Yes
+     |          |
+ Invalid       Set current user
+ Login         |
+              Open role panel
+                   |
+                  STOP
 ```
 
-## Attendance Algorithm
+## C.2 Attendance Algorithm
 
 ```
 START
- |
-Identify user and role
- |
+  |
+Identify user
+  |
 Load profile
- |
-Determine subject/date/ID
- |
+  |
+Get date and subject
+  |
 Check duplicate attendance
- |
+  |
 Duplicate?
- |---- Yes ----> Reject/Override
- |
-No
- |
-Create AttendanceRecord
- |
-Write to attendance.dat
- |
-Display success
- |
-STOP
+ /       \
+Yes       No
+|          |
+Reject     Create AttendanceRecord
+           |
+       Write attendance.dat
+           |
+       Display result
+           |
+          STOP
 ```
 
 ---
 
-# APPENDIX 3: DATABASE/FIL​E FIELD SUMMARY
+# APPENDIX D: SCREENSHOT CHECKLIST
 
-## Credentials
-
-```
-username
-password
-role
-```
-
-## Student
-
-```
-username
-name
-dateOfBirth
-rollNumber
-semester
-subject
-program
-section
-```
-
-## Teacher
-
-```
-username
-teacherId
-name
-dateOfBirth
-department
-qualification
-```
-
-## Staff
-
-```
-username
-role
-name
-dateOfBirth
-department
-```
-
-## Attendance
-
-```
-username
-role
-rollNumber
-semester
-subject
-date
-status
-markedBy
-```
-
----
-
-# APPENDIX 4: SCREENSHOT CHECKLIST FOR FINAL SUBMISSION
-
-The following screenshots should be captured from the final running system and inserted into the final formatted report:
+The following screenshots should be captured from the final running system and inserted into the final Word report:
 
 1. Main application menu.
 2. Admin login.
-3. Admin dashboard.
-4. User management menu.
-5. Add student screen.
-6. Student details screen.
+3. Admin panel.
+4. User management.
+5. Add student.
+6. Student details.
 7. Student search result.
-8. Student update screen.
-9. Teacher management menu.
-10. Add teacher screen.
-11. Teacher details screen.
+8. Student update.
+9. Teacher management.
+10. Add teacher.
+11. Teacher details.
 12. Student/Teacher login.
-13. Student attendance screen.
-14. Attendance marking screen.
+13. Student attendance.
+14. Attendance marking.
 15. Attendance history.
-16. Attendance percentage result.
+16. Attendance percentage.
 17. Manual attendance override.
 18. System configuration.
 19. Invalid login message.
 20. Duplicate attendance message.
 21. Invalid input message.
 22. Successful logout.
-23. Final exit screen.
+23. Exit screen.
 
 ---
 
-# APPENDIX 5: PROJECT FILE SUMMARY
+# APPENDIX E: PROJECT DEVELOPMENT PHASES
 
-```
-include/
-├── AuthenticationBase.h
-├── Common.h
-└── Panels.h
-
-src/
-├── AuthenticationBase.cpp
-├── Common.cpp
-├── Panels.cpp
-└── main.cpp
-
-Data Files/
-├── credentials.dat
-├── students.dat
-├── teachers.dat
-├── staff.dat
-└── attendance.dat
-```
-
----
-
-# APPENDIX 6: PROJECT DEVELOPMENT TASKS
-
-| Phase | Major Activities |
+| Phase | Activity |
 |---|---|
-| Phase 1 | Topic selection and requirement identification |
-| Phase 2 | Problem analysis |
-| Phase 3 | System design |
-| Phase 4 | Class and data-structure design |
-| Phase 5 | Authentication implementation |
-| Phase 6 | Student and teacher management |
-| Phase 7 | Attendance implementation |
-| Phase 8 | Validation and error handling |
-| Phase 9 | Integration and debugging |
-| Phase 10 | Testing |
-| Phase 11 | Documentation |
-| Phase 12 | Final presentation and submission |
+| Phase 1 | Topic selection |
+| Phase 2 | Requirement identification |
+| Phase 3 | Existing-system analysis |
+| Phase 4 | System design |
+| Phase 5 | Class and data-structure design |
+| Phase 6 | Authentication implementation |
+| Phase 7 | Student and teacher management |
+| Phase 8 | Attendance implementation |
+| Phase 9 | Validation and error handling |
+| Phase 10 | Integration and debugging |
+| Phase 11 | Testing |
+| Phase 12 | Documentation |
 
 ---
 
-# APPENDIX 7: OBJECT-ORIENTED CONCEPTS USED
-
-## Encapsulation
-
-Data and related operations are organized inside classes such as `AuthenticationBase` and the role-specific panel classes.
-
-## Inheritance
-
-`AdminPanel`, `SubAdminPanel`, and `StudentTeacherPanel` inherit common functionality from `AuthenticationBase`.
-
-## Abstraction
-
-Common authentication, file-handling, searching, and attendance operations are provided through member functions rather than exposing all implementation details to the role-specific panels.
-
-## Polymorphism
-
-The project mainly uses inheritance and shared base-class functionality. It does not heavily depend on runtime virtual-function polymorphism.
-
-## Modular Programming
-
-The source is separated into:
-
-- Header files.
-- Implementation files.
-- Common utility functions.
-- Role-specific panel implementation.
-- Main program.
-
----
-
-# APPENDIX 8: PROJECT SCOPE SUMMARY
-
-The current project is a **local educational attendance management prototype**. It is intended to demonstrate practical application of C++ OOP and file handling rather than provide a full enterprise-level attendance platform.
-
-The system currently focuses on:
-
-**Authentication → User Management → Student/Teacher Management → Attendance → File Storage → Reporting**
-
-Future development can extend this foundation toward:
-
-**Authentication → Database → Web/Mobile Interface → Automated Attendance → Analytics → Cloud Backup**
-
----
-
-## END OF REPORT
+# END OF REPORT
