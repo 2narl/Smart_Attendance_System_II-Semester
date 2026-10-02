@@ -873,8 +873,14 @@ bool AuthenticationBase::markAttendance(const string &username,
     string attendanceSubject = subject;
 
     StudentRecord student;
-    if (attendanceRole == "Student" && findStudentByUsername(username, student))
+    if (attendanceRole == "Student")
     {
+        if (!findStudentByUsername(username, student))
+        {
+            cout << "Error: Student profile was not found.\n";
+            return false;
+        }
+
         rollNumber = student.rollNumber;
         semester = student.semester;
 
@@ -895,22 +901,111 @@ bool AuthenticationBase::markAttendance(const string &username,
     if (attendanceSubject.empty())
         attendanceSubject = "General";
 
-    if (attendanceExists(username, date, attendanceSubject))
+    const bool alreadyExists = attendanceExists(username, date, attendanceSubject);
+    vector<AttendanceRecord> absentRecords;
+
+    if (!equalsIgnoreCase(status, "Absent") && attendanceRole == "Student")
     {
-        cout << "\nAttendance already exists for:\n";
-        cout << "Date    : " << date << endl;
-        cout << "Subject : " << attendanceSubject << endl;
-        return false;
+        if (!hasValidRecordSize(STUDENT_FILE, sizeof(StudentRecord)))
+        {
+            cout << "Error: Student file is corrupted.\n";
+            return false;
+        }
+
+        ifstream studentsFile(STUDENT_FILE, ios::binary);
+        if (!studentsFile.is_open())
+            return false;
+
+        StudentRecord rosterStudent;
+        while (studentsFile.read(reinterpret_cast<char *>(&rosterStudent), sizeof(StudentRecord)))
+        {
+            const string rosterSubject =
+                std::strlen(rosterStudent.subject) == 0 ? "General" : rosterStudent.subject;
+            if (equalsIgnoreCase(rosterStudent.username, username) ||
+                !equalsIgnoreCase(rosterStudent.semester, semester) ||
+                !equalsIgnoreCase(rosterSubject, attendanceSubject) ||
+                !equalsIgnoreCase(rosterStudent.program, student.program) ||
+                !equalsIgnoreCase(rosterStudent.section, student.section) ||
+                attendanceExists(rosterStudent.username, date, attendanceSubject))
+            {
+                continue;
+            }
+
+            AttendanceRecord record{};
+            copyToField(record.username, rosterStudent.username, sizeof(record.username));
+            copyToField(record.role, "Student", sizeof(record.role));
+            copyToField(record.rollNumber, rosterStudent.rollNumber, sizeof(record.rollNumber));
+            copyToField(record.semester, rosterStudent.semester, sizeof(record.semester));
+            copyToField(record.subject, attendanceSubject, sizeof(record.subject));
+            copyToField(record.date, date, sizeof(record.date));
+            copyToField(record.status, "Absent", sizeof(record.status));
+            copyToField(record.markedBy, markedBy, sizeof(record.markedBy));
+            absentRecords.push_back(record);
+        }
+    }
+    else if (!equalsIgnoreCase(status, "Absent") && attendanceRole == "Teacher")
+    {
+        if (!hasValidRecordSize(TEACHER_FILE, sizeof(TeacherRecord)))
+        {
+            cout << "Error: Teacher file is corrupted.\n";
+            return false;
+        }
+
+        ifstream teachersFile(TEACHER_FILE, ios::binary);
+        if (!teachersFile.is_open())
+            return false;
+
+        TeacherRecord rosterTeacher;
+        while (teachersFile.read(reinterpret_cast<char *>(&rosterTeacher), sizeof(TeacherRecord)))
+        {
+            if (equalsIgnoreCase(rosterTeacher.username, username) ||
+                attendanceExists(rosterTeacher.username, date, attendanceSubject))
+            {
+                continue;
+            }
+
+            AttendanceRecord record{};
+            copyToField(record.username, rosterTeacher.username, sizeof(record.username));
+            copyToField(record.role, "Teacher", sizeof(record.role));
+            copyToField(record.rollNumber, rosterTeacher.teacherId, sizeof(record.rollNumber));
+            copyToField(record.semester, "N/A", sizeof(record.semester));
+            copyToField(record.subject, attendanceSubject, sizeof(record.subject));
+            copyToField(record.date, date, sizeof(record.date));
+            copyToField(record.status, "Absent", sizeof(record.status));
+            copyToField(record.markedBy, markedBy, sizeof(record.markedBy));
+            absentRecords.push_back(record);
+        }
     }
 
-    return saveAttendance(username,
-                          attendanceRole,
-                          rollNumber,
-                          semester,
-                          attendanceSubject,
-                          date,
-                          status,
-                          markedBy);
+    const bool saved = alreadyExists
+                           ? updateAttendanceRecord(username, date, attendanceSubject, status, markedBy)
+                           : saveAttendance(username,
+                                            attendanceRole,
+                                            rollNumber,
+                                            semester,
+                                            attendanceSubject,
+                                            date,
+                                            status,
+                                            markedBy);
+    if (!saved)
+        return false;
+
+    for (const AttendanceRecord &record : absentRecords)
+    {
+        if (!saveAttendance(record.username,
+                            record.role,
+                            record.rollNumber,
+                            record.semester,
+                            record.subject,
+                            record.date,
+                            record.status,
+                            record.markedBy))
+        {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 void AuthenticationBase::readAttendance(const string &username,
