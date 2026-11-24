@@ -82,21 +82,48 @@ The application uses local data files for persistent storage. The project uses t
 
 ## Project Structure
 
-The entry point currently available in the repository is `src/main.cpp`. It includes `Panels.h` and starts the main menu.
-
-The project is organized around separate panels and supporting classes. The exact source-file list may change as development continues. A useful structure to maintain is:
+The repository is organized into three main parts: **source files**, **header files**, and **local data files**. The current structure on the `main` branch is:
 
 ```text
 Smart_Attendance_System_II-Semester/
-├── src/
-│   └── main.cpp
-├── [header and implementation files]
-├── [data files]
-├── .gitignore
-└── README.md
+│
+├── include/                         # Header files
+│   ├── AuthenticationBase.h         # Authentication base class declarations
+│   ├── Common.h                     # Shared functions and common declarations
+│   └── Panels.h                     # Admin, Sub-Admin, and Student/Teacher panel declarations
+│
+├── src/                             # C++ implementation files
+│   ├── main.cpp                     # Program entry point and main menu
+│   ├── AuthenticationBase.cpp       # Authentication implementation
+│   ├── Common.cpp                   # Common utility function implementations
+│   └── Panels.cpp                   # User panel and menu implementations
+│
+├── attendance.dat                   # Stored attendance records
+├── credentials.dat                  # Stored login credential records
+├── students.dat                      # Stored student records
+├── teachers.dat                      # Stored teacher records
+├── staff.dat                         # Stored staff records
+│
+├── project.exe                       # Windows executable (precompiled program)
+├── .gitignore                        # Files and folders ignored by Git
+└── README.md                         # Project documentation
 ```
 
-Keep this section synchronized with the actual repository whenever files or folders are added, removed, or renamed.
+### Directory and file descriptions
+
+| Path | Description |
+|---|---|
+| `include/` | Contains header files (`.h`) that declare classes, functions, and shared interfaces. |
+| `src/` | Contains C++ source files (`.cpp`) that implement the application logic. |
+| `src/main.cpp` | Starts the application and displays the main login menu. |
+| `src/AuthenticationBase.cpp` | Implements the authentication-related functionality. |
+| `src/Common.cpp` | Implements common utility functions used by the application. |
+| `src/Panels.cpp` | Implements the different user panels and their menu operations. |
+| `*.dat` | Local files used to persist credentials, user information, and attendance records. |
+| `project.exe` | A precompiled Windows executable included in the repository. |
+| `.gitignore` | Defines generated and temporary files that Git should ignore. |
+
+**Note:** The `.dat` files are currently located in the repository root, not inside a separate `data/` directory. Run the application from the repository root so that relative file paths resolve correctly. The structure above reflects the files currently present in the repository; update it whenever the project layout changes.
 
 ## Getting Started
 
