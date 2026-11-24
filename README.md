@@ -225,6 +225,7 @@ Possible improvements for future versions include:
 
 ---
 
-## Contributor
+## Contributors
 
-- [2narl](https://github.com/2narl)
+- **Narayan Aryal** — [GitHub Profile](https://github.com/2narl)
+- **Prabesh Karki** — [GitHub Profile](https://github.com/prabeshkarki0202-lab)
