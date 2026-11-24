@@ -222,3 +222,9 @@ Possible improvements for future versions include:
 | Semester | Second Semester |
 | Project | Smart Attendance Management System |
 | Language | C++ |
+
+---
+
+## Contributor
+
+- [2narl](https://github.com/2narl)
